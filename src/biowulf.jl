@@ -373,8 +373,6 @@ function folder_path(folder::String, root::String, folderatetype::String=""; mak
             f = joinpath(root, folderatetype, folder)
             if ~ispath(f) && ~make
                 throw("$folder not found")
-            else
-                mkpath(f)
             end
         end
     end
